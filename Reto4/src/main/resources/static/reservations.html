@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./js/functions.js"></script>
+    <title>GÖETIALIBS</title>
+</head>
+
+<body style="background-color:lavender">
+    <script type="text/javascript">
+        window.onload = traerInformacionReserva();
+    </script>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 d-flex justify-content-center" style="background-color:black;">
+                <h1 style="color:white; font-size: 60px;">GÖETIALIBS</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container shadow">
+        <div class="row"
+            style="margin-top: 10px; padding-top: 10px !important; padding-bottom: 10px !important; background-color:#2c0202; ">
+            <div class="col-md-1">
+                <img src="./images/favicon.png" width="60" />
+            </div>
+            <div class="col-md-7">
+                <h1 style="color:white">Administrar Reservaciones</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container shadow" style="background-color: white;">
+        <div class="row" style="margin-top: 20px !important; padding-bottom: 15px !important;">
+            <div class="d-flex justify-content-center">
+                <div class="col-sm-6" style="padding-top: 20px;">
+                    <table class=table>
+                        <thead>
+                            <tr>
+                                <th scope="col" class="col-md-1">
+                                    <center>COD</center>
+                                </th>
+                                <th scope="col" class="col-md-2">
+                                    <center>ENTREGA</center>
+                                </th>
+                                <th scope="col" class="col-md-2">
+                                    <center>DEVOLUCION</center>
+                                </th>
+                                <th scope="col" class="col-md-4">
+                                    <center>CLIENTE</center>
+                                </th>
+                                <th scope="col" class="col-md-2">
+                                    <center>LIBRERÍA</center>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><input type="number" id="idReservacion" class="form-control"
+                                        disabled="disabled"></th>
+                                <th><input type="date" class="form-control" id="fechaInico"></th>
+                                <th><input type="date" class="form-control" id="fechaDevo"></th>
+                                <th><select id="relacion-cliente" class="form-select"></select></th>
+                                <th><select id="relacion-cuadrimoto" class="form-select"></select></th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="background-color: white;">
+            <div class="row" style="padding-bottom: 15px !important;">
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-outline-dark btn-mg" style="width: 120px !important; margin:3px;"
+                        onclick="guardarInformacionReserva()">Crear</button>
+                    <button class="btn btn-outline-dark btn-mg" style="width: 120px !important; margin:3px;"
+                        onclick="editarInformacionReserva()">Actualizar</button>
+                    <button class="btn btn-outline-dark btn-mg" style="width: 120px !important; margin:3px;"
+                        onclick="limpiarElementoReserva()">Limpiar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="background-color: white;">
+            <div class="col-md-10 mt-4" style="padding-bottom: 10px;">
+                <div class="d-flex justify-content-center">
+                    <div class="row">
+                        <div class="col-md-12" id="resultado5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="background-color: white;">
+        <div class="row" style="padding-bottom: 25px !important;">
+            <div class="d-flex justify-content-center">
+                <a href="index.html" id="regresar" class="btn btn-danger btn-mg shadow"
+                    style="width: 120px !important; margin:3px;">Regresar</a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="container">
+        <div class="row shadow" style="background-color:black; margin-top:10px">
+            <div class="d-flex justify-content-center align-middle">
+                <label style="color:darkgrey">Developer by:
+                    <a style="color:white !important" href="mailto:elsy.del.mt@correo.usa.edu.co">Elsy Del Águila</a>
+                </label>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
